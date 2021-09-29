@@ -1,0 +1,11 @@
+<div class="countries">
+  <div class="countries-list__search">
+    <app-search (valueChangeEvent)="getCountries($event)" [value]="searchValue"></app-search>
+  </div>
+  <div class="countries-list__main">
+    <ng-container *ngIf="(countries$ | async) as countries">
+      <app-countries-list [countries]="countries" (updateCountryEvent)="toggleCountryStatus($event)"></app-countries-list>
+    </ng-container>
+  </div>
+</div>
+

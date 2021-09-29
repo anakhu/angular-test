@@ -1,0 +1,46 @@
+@import 'ag-grid.scss';
+@import 'constants.scss';
+
+html, body { height: 100%; overflow-y: auto; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-top: $navbar-height;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.search {
+  &.mat-form-field {
+    border-radius: 4px;
+
+    .mat-form-field-wrapper {
+      display: block !important;
+    }
+
+    .mat-input-element {
+      vertical-align: middle;
+    }
+  }
+}
+
+.pagination__page-settings {
+  .mat-form-field {
+    width: 60px;
+  }
+}

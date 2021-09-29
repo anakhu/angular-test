@@ -1,0 +1,62 @@
+@import 'constants.scss';
+
+.country-card {
+  padding: 2em;
+  margin-top: 4em;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+
+    .header__btn-back {
+      margin-right: 2em;
+      justify-self: flex-start;
+      text-align: center;
+    }
+
+    .header__info {
+      margin-left: 2.4em;
+      flex-grow: 1;
+      text-align: center;
+
+      .img {
+        width: 6rem;
+        object-fit: contain;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+
+
+        img {
+          width: 100%;
+        }
+
+      }
+
+      p {
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2em 0;
+
+    .content__info-item {
+      margin: 2em 0;
+      display: flex;
+      align-items: center;
+      min-height: 8rem;
+
+      & > * {
+        flex-basis: 50%;
+        padding: 1.2em;
+      }
+
+      &:nth-child(odd) {
+        background-color: $grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'constants';
+
+.countries-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+
+  &__body {
+    height: calc(100vh - 80px);
+    position: relative;
+    overflow-y: hidden;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    position: sticky;
+    bottom: 0;
+    background: $white;
+  }
+}

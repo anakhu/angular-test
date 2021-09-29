@@ -1,0 +1,43 @@
+<div *ngIf="country" class="country-card">
+  <div class="country-card__header">
+    <div class="header__btn-back">
+      <a mat-icon-button
+          color="primary"
+          routerLink="/countries"
+        >
+        <mat-icon>keyboard_backspace</mat-icon>
+      </a>
+    </div>
+    <div class="header__info">
+      <h3 class="bold">{{country.name}}</h3>
+      <span class="img">
+         <img src="{{country.flagUrl}}" alt="Flag">
+      </span>
+      <p>{{country.region}}</p>
+      <p>{{country.subregion}}</p>
+    </div>
+  </div>
+  <div class="country-card__content">
+    <div class="content__info">
+      <div class="content__info-item">
+        <span class="bold">Capital</span>
+        <span>{{country.capital}}</span>
+      </div>
+      <div class="content__info-item">
+        <span class="bold">Languages</span>
+        <ul>
+          <li *ngFor="let language of country.languages">
+            {{language}}
+          </li>
+        </ul>
+      </div>
+      <div class="content__info-item">
+        <span class="bold">Currencies</span>
+        <ul>
+          <li *ngFor="let currency of country.currencies">
+            {{currency.name}}
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>

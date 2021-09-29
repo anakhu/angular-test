@@ -1,0 +1,52 @@
+<div *ngIf="paginationSettings" class="pagination">
+  <div class="pagination__main">
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="onBtnClick(actions.first)"
+      [disabled]="paginationSettings.isFirstPage"
+      >
+      <mat-icon>first_page</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="onBtnClick(actions.previous)"
+      [disabled]="paginationSettings.isFirstPage"
+      >
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <input matInput
+      type="number"
+      [value]="paginationSettings?.currentPage"
+      [max]="paginationSettings?.totalPages"
+      [min]="1"
+      (change)="onPageInput($event)"
+      (blur)="onPageSelect($event)"
+    >
+    <span>/ {{paginationSettings.totalPages}}</span>
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="onBtnClick(actions.next)"
+      [disabled]="paginationSettings.isLastPage"
+      >
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="onBtnClick(actions.last)"
+      [disabled]="paginationSettings.isLastPage"
+      >
+      <mat-icon>last_page</mat-icon>
+    </button>
+  </div>
+  <div class="pagination__page-settings">
+    <mat-form-field *ngIf="paginationSettings">
+      <mat-select (selectionChange)="onPageSizeSelect($event)" [(value)]="paginationSettings.amountPerPage">
+        <mat-option *ngFor="let option of pageSizeOptions" [value]="option">{{option}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+@import 'constants.scss';
+
+.countries-app {
+  position: relative;
+
+  &__nav {
+    background-color: $primary-color;
+    height: $navbar-height;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+
+    .nav__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      &-item {
+        padding: 0.5em;
+      }
+
+      &-item:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &-item.logo {
+        background-image: url('../assets/img/globe.png');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+      }
+
+      &-item.title {
+        color: $white;
+      }
+    }
+  }
+}

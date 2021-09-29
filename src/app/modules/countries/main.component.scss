@@ -1,0 +1,30 @@
+@import 'constants.scss';
+
+.countries {
+  &__countries-list {
+    position: relative;
+  }
+
+  .countries-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__search {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      height: $navbar-height;
+      position: sticky;
+      top: 0.2rem;
+      background: $white;
+    }
+
+    &__main {
+       height: 100%;
+    }
+  }
+}
+

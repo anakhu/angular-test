@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    margin: 0 1em;
+
+    & > button, input, span {
+    display: inline-block;
+    width: max-content;
+    }
+
+    input {
+      max-width: 40px !important;
+    }
+  }
+
+  &__page-settings {
+    display: flex;
+    align-items: center;
+    margin: 0 2em;
+
+    label {
+      margin-right: 1em;
+    }
+  }
+
+}

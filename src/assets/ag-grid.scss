@@ -1,0 +1,40 @@
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+.ag-theme-alpine {
+  .ag-row:not(.ag-row-selected) {
+    .ag-selection-checkbox {
+      visibility: hidden;
+    }
+
+    &:hover {
+      .ag-selection-checkbox {
+        visibility: visible;
+      }
+    }
+  }
+
+  .ag-row .ag-cell {
+    display: flex;
+    align-items: center;
+  }
+
+  .ag-cell.country-flag {
+    display: flex;
+
+    .ag-cell-value span {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.ag-theme-alpine.headless {
+  .ag-header {
+    display: none;
+  }
+  .ag-body-viewport {
+    overflow-y: auto;
+    min-height: 100vh;
+  }
+}
